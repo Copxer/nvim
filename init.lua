@@ -1,6 +1,7 @@
 require 'core.options' -- Load general options
 require 'core.keymaps' -- Load general keymaps
 require 'core.snippets' -- Custom code snippets
+require 'core.autocmds' -- autocmds code snippets
 
 -- Install package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -49,9 +50,10 @@ require('lazy').setup({
     require 'plugins.misc',
     require 'plugins.harpoon',
     -- require 'plugins.avante',
-    -- require 'plugins.chatgpt',
+    require 'plugins.chatgpt',
     require 'plugins.aerial',
     require 'plugins.vim-tmux-navigator',
+    -- require 'plugins.conform',
 }, {
     ui = {
         -- If you have a Nerd Font, set icons to an empty table which will use the
